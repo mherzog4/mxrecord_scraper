@@ -3,7 +3,7 @@ import dns from 'dns';
 import { promisify } from 'util';
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Promisify the dns.resolveMx function
 const resolveMx = promisify(dns.resolveMx);
@@ -65,5 +65,5 @@ function determineEmailSecurity(mxRecord) {
 }
 
 app.listen(port, () => {
-    console.log(`MX Record API listening at http://localhost:${port}`);
+    console.log(`MX Record API listening on port ${port}`);
 });
