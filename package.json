@@ -1,0 +1,17 @@
+{
+  "name": "mx-record-api",
+  "version": "1.0.0",
+  "description": "API to check MX records and email security for domains",
+  "main": "mx_record_api.js",
+  "type": "module",
+  "scripts": {
+    "start": "node mx_record_api.js",
+    "dev": "nodemon mx_record_api.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
